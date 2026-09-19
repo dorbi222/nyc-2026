@@ -774,7 +774,8 @@ export const SEED = {
     "dep": "2026-09-30T01:00",
     "arr": "2026-09-30T05:50",
     "conf": "GSJQIF",
-    "seat": ""
+    "seat": "",
+    "carrier": "LY"
    },
    {
     "id": "f2",
@@ -786,7 +787,8 @@ export const SEED = {
     "dep": "2026-10-10T17:30",
     "arr": "2026-10-11T07:00",
     "conf": "GSJQIF",
-    "seat": ""
+    "seat": "",
+    "carrier": "AF"
    },
    {
     "id": "f3",
@@ -798,7 +800,8 @@ export const SEED = {
     "dep": "2026-10-11T09:25",
     "arr": "2026-10-11T14:45",
     "conf": "GSJQIF",
-    "seat": ""
+    "seat": "",
+    "carrier": "AF"
    }
   ],
   "moti": [
@@ -812,7 +815,8 @@ export const SEED = {
     "dep": "2026-09-30T01:00",
     "arr": "2026-09-30T05:50",
     "conf": "",
-    "seat": ""
+    "seat": "",
+    "carrier": "LY"
    }
   ],
   "ben": []
