@@ -8,7 +8,7 @@ import {
 import { SEED } from './data.js';
 
 // ▼▼▼ הדבק כאן את ה־config מהפרויקט שלך בפיירבייס (Project settings → Your apps → Web) ▼▼▼
-const firebaseConfig = {
+const FIREBASE_CONFIG = {
   apiKey: "AIzaSyD8LfeooJ1pBiIq0hWO4BJqB2bH60zfy0g",
   authDomain: "nyc-2026-67f7c.firebaseapp.com",
   projectId: "nyc-2026-67f7c",
