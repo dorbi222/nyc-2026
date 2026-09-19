@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function sessionPath() { return /databases/$(database)/documents/sessions/$(request.auth.uid); }
+    function hasSession() { return signedIn() && exists(sessionPath()); }
+    function me() { return get(sessionPath()).data.profile; }
+    function isBro() { return hasSession() && me() in ['dor', 'moti', 'ben']; }
+    function isDor() { return hasSession() && me() == 'dor'; }
+    function setupDone() { return exists(/databases/$(database)/documents/meta/setup); }
+
+    // הגדרה ראשונה: אפשר ליצור קודים רק לפני שההגדרה ננעלה
+    match /meta/setup {
+      allow read: if signedIn();
+      allow create: if signedIn() && !setupDone();
+    }
+    match /users/{p} {
+      allow read: if false;
+      allow create: if signedIn() && p in ['dor', 'moti', 'ben'] && !setupDone();
+    }
+
+    // כניסה: נוצרת רק אם הקוד המוצפן תואם לקוד השמור
+    match /sessions/{uid} {
+      allow read, delete: if signedIn() && request.auth.uid == uid;
+      allow create, update: if signedIn() && request.auth.uid == uid
+        && request.resource.data.profile in ['dor', 'moti', 'ben']
+        && request.resource.data.pinHash == get(/databases/$(database)/documents/users/$(request.resource.data.profile)).data.pinHash;
+    }
+
+    match /brothers_items/{id} { allow read, write: if isBro(); }
+    match /expenses/{id}       { allow read, write: if isBro(); }
+    match /mba_items/{id}      { allow read, write: if isDor(); }
+    match /settings/{id}       { allow read: if isBro(); allow write: if isDor(); }
+    match /personal/{owner}/{coll}/{id} { allow read, write: if hasSession() && me() == owner; }
+  }
+}
