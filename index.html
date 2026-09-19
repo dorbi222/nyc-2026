@@ -14,11 +14,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+  // מציג על המסך כל תקלה שקורית בזמן העלייה, במקום להיתקע על הלוגו
+  window.__bootErr = function (msg) {
+    if (!document.querySelector('.boot')) return;
+    document.getElementById('app').innerHTML = '<div class="login"><div class="brand"><h1>האתר לא עלה</h1><p style="direction:ltr;text-align:right">' +
+      String(msg).replace(/</g, '&lt;') + '</p><p>שלב: ' + (window.__step || 'טעינת הקוד') + '</p><button class="btn" onclick="location.reload()">לנסות שוב</button></div></div>';
+  };
+  window.addEventListener('error', function (e) { window.__bootErr((e.message || 'שגיאה') + (e.filename ? ' (' + e.filename.split('/').pop() + ':' + e.lineno + ')' : '')); });
+  window.addEventListener('unhandledrejection', function (e) { var r = e.reason || {}; window.__bootErr((r.code || '') + ' ' + (r.message || r)); });
+  setTimeout(function () { window.__bootErr('עברו 15 שניות והאתר לא סיים לעלות'); }, 15000);
+</script>
 </head>
 <body>
 <div id="app"><div class="boot"><span class="bullet big" style="--c:#FCCC0A;color:#000">NY</span></div></div>
 <div id="sheet-root"></div>
 <div id="toast" role="status" aria-live="polite"></div>
-<script type="module" src="app.js"></script>
+<script type="module" src="app.js?v=2" onerror="window.__bootErr('הקובץ app.js לא נטען')"></script>
 </body>
 </html>

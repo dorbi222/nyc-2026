@@ -107,9 +107,11 @@ applyTheme();
 if (!configured) {
   $('#app').innerHTML = `<div class="login"><div class="brand"><span class="bullet big dark-ink" style="--c:#FCCC0A">NY</span><h1>כמעט מוכן</h1><p>צריך להדביק את ה־config של פיירבייס בראש הקובץ app.js. ההוראות המלאות בקובץ README.</p></div></div>`;
 } else {
+  window.__step = 'התחברות לפיירבייס';
   onAuthStateChanged(auth, async user => {
-    if (!user) { signInAnonymously(auth).catch(e => fatal(e)); return; }
+    if (!user) { window.__step = 'כניסה אנונימית'; signInAnonymously(auth).catch(e => fatal(e)); return; }
     S.uid = user.uid;
+    window.__step = 'קריאה מהדאטהבייס';
     try {
       const ses = await getDoc(doc(db, 'sessions', S.uid));
       if (ses.exists() && PEOPLE[ses.data().profile]) start(ses.data().profile);
@@ -117,7 +119,7 @@ if (!configured) {
     } catch (e) { showLogin(); }
   });
 }
-function fatal(e) { console.error(e); $('#app').innerHTML = `<div class="login"><div class="brand"><h1>אין חיבור</h1><p>${esc(e.message)}</p><button class="btn" onclick="location.reload()">לנסות שוב</button></div></div>`; }
+function fatal(e) { console.error(e); $('#app').innerHTML = `<div class="login"><div class="brand"><h1>אין חיבור</h1><p>${esc(e.code || '')} ${esc(e.message)}</p><button class="btn" onclick="location.reload()">לנסות שוב</button></div></div>`; }
 
 // ---------------- login ----------------
 async function showLogin() {
