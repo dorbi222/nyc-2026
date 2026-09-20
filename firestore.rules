@@ -5,32 +5,47 @@ service cloud.firestore {
     function sessionPath() { return /databases/$(database)/documents/sessions/$(request.auth.uid); }
     function hasSession() { return signedIn() && exists(sessionPath()); }
     function me() { return get(sessionPath()).data.profile; }
-    function isBro() { return hasSession() && me() in ['dor', 'moti', 'ben']; }
-    function isDor() { return hasSession() && me() == 'dor'; }
+    function is(list) { return hasSession() && me() in list; }
     function setupDone() { return exists(/databases/$(database)/documents/meta/setup); }
 
-    // הגדרה ראשונה: אפשר ליצור קודים רק לפני שההגדרה ננעלה
+    // הגדרה ראשונה ומשתמשים
     match /meta/setup {
       allow read: if signedIn();
       allow create: if signedIn() && !setupDone();
     }
     match /users/{p} {
       allow read: if false;
-      allow create: if signedIn() && p in ['dor', 'moti', 'ben'] && !setupDone();
+      allow create: if (signedIn() && p in ['dor', 'moti', 'ben'] && !setupDone())
+                    || (p == 'sydney' && is(['dor']));
     }
 
-    // כניסה: נוצרת רק אם הקוד המוצפן תואם לקוד השמור
+    // כניסה: רק עם קוד נכון
     match /sessions/{uid} {
       allow read, delete: if signedIn() && request.auth.uid == uid;
       allow create, update: if signedIn() && request.auth.uid == uid
-        && request.resource.data.profile in ['dor', 'moti', 'ben']
+        && request.resource.data.profile in ['dor', 'moti', 'ben', 'sydney']
         && request.resource.data.pinHash == get(/databases/$(database)/documents/users/$(request.resource.data.profile)).data.pinHash;
     }
 
-    match /brothers_items/{id} { allow read, write: if isBro(); }
-    match /expenses/{id}       { allow read, write: if isBro(); }
-    match /mba_items/{id}      { allow read, write: if isDor(); }
-    match /settings/{id}       { allow read: if isBro(); allow write: if isDor(); }
+    // הטיול של שלושתנו: סידני רואה, לא עורכת
+    match /brothers_items/{id} {
+      allow read: if is(['dor', 'moti', 'ben', 'sydney']);
+      allow write: if is(['dor', 'moti', 'ben']);
+    }
+    match /expenses/{id} { allow read, write: if is(['dor', 'moti', 'ben']); }
+
+    // בוסטון: מוטי ובן עורכים, סידני רואה, דור לא
+    match /boston_items/{id} {
+      allow read: if is(['moti', 'ben', 'sydney']);
+      allow write: if is(['moti', 'ben']);
+    }
+    match /boston_expenses/{id} { allow read, write: if is(['moti', 'ben']); }
+
+    // MBA: רק דור
+    match /mba_items/{id} { allow read, write: if is(['dor']); }
+
+    match /settings/{id} { allow read: if hasSession(); allow write: if is(['dor']); }
+    match /migrations/{id} { allow read: if hasSession(); allow write: if is(['dor', 'moti', 'ben']); }
     match /personal/{owner}/{coll}/{id} { allow read, write: if hasSession() && me() == owner; }
   }
 }

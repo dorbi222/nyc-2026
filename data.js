@@ -4,27 +4,37 @@ export const SEED = {
    {
     "date": "2026-09-30",
     "title": "נוחתים, גוגל והיי־ליין",
-    "note": "יום של התאקלמות. בלי כרטיסים מראש, כדי להיות גמישים עם הנחיתה והעייפות."
+    "note": "יום של התאקלמות. בלי כרטיסים מראש, כדי להיות גמישים עם הנחיתה והעייפות.",
+    "titleEn": "Landing, Google & the High Line",
+    "noteEn": "An easy first day. Nothing booked ahead, so we can go with the flow after the flight."
    },
    {
     "date": "2026-10-01",
     "title": "הפיננסי, פסטרמה, ברודוויי וויסקי",
-    "note": "יום עמוס וקלאסי. מחייב כרטיסים לערב."
+    "note": "יום עמוס וקלאסי. מחייב כרטיסים לערב.",
+    "titleEn": "Wall Street, pastrami, Broadway & whiskey",
+    "noteEn": "A packed classic day. Evening tickets needed."
    },
    {
     "date": "2026-10-02",
     "title": "ריצת בוקר וסטנדאפ",
-    "note": "שישי בערב בניו יורק. הסטנדאפ חייב הזמנה מראש."
+    "note": "שישי בערב בניו יורק. הסטנדאפ חייב הזמנה מראש.",
+    "titleEn": "Morning run & stand-up",
+    "noteEn": "Friday night in NYC. The comedy club has to be booked ahead."
    },
    {
     "date": "2026-10-03",
     "title": "ברוקלין, בירות וברים",
-    "note": "רוב היום מעבר לנהר, אווירה צעירה יותר."
+    "note": "רוב היום מעבר לנהר, אווירה צעירה יותר.",
+    "titleEn": "Brooklyn, beers & bars",
+    "noteEn": "Most of the day across the river, a younger vibe."
    },
    {
     "date": "2026-10-04",
     "title": "צהריים אחרונים ופיצול",
-    "note": "סוגרים את הטיול ועוברים בצורה חלקה ללו\"ז של הלימודים."
+    "note": "סוגרים את החלק המשותף. דור ממשיך ללימודים, מוטי ובן לבוסטון.",
+    "titleEn": "Last lunch & splitting up",
+    "noteEn": "Wrapping up the shared part. Dor heads to the MBA program, Moti and Ben go on to Boston."
    }
   ],
   "mba": [
@@ -70,6 +80,29 @@ export const SEED = {
     "dress": "חופשי",
     "note": "טיסה ב־17:30 מ־JFK."
    }
+  ],
+  "boston": [
+   {
+    "date": "2026-10-05",
+    "title": "קונטיקט והצוקים של ניופורט",
+    "titleEn": "Connecticut & the Newport cliffs",
+    "note": "3:45 שעות נהיגה, 310 ק\"מ. כ־8 ק\"מ הליכה.",
+    "noteEn": "3h45 of driving, 310 km. About 8 km on foot."
+   },
+   {
+    "date": "2026-10-06",
+    "title": "בוסטון ברגל",
+    "titleEn": "Boston on foot",
+    "note": "1:45 שעות נהיגה. הרכב חונה מ־10:30 עד הבוקר, 10–12 ק\"מ הליכה.",
+    "noteEn": "1h45 of driving. The car stays parked from 10:30 until morning. 10–12 km on foot."
+   },
+   {
+    "date": "2026-10-07",
+    "title": "וולדן, החוף ו־JFK",
+    "titleEn": "Walden, the coast & JFK",
+    "note": "4:30 שעות נהיגה, 420 ק\"מ. חייבים להגיע ל־JFK עד 22:30.",
+    "noteEn": "4h30 of driving, 420 km. Must reach JFK by 22:30."
+   }
   ]
  },
  "brothers": [
@@ -80,7 +113,9 @@ export const SEED = {
    "title": "נחיתה ב־JFK",
    "desc": "טיסת LY 1, דור ומוטי",
    "address": "JFK Airport, Queens, NY",
-   "kind": "transport"
+   "kind": "transport",
+   "titleEn": "Landing at JFK",
+   "descEn": "Flight LY 1, Dor and Moti"
   },
   {
    "id": "b02",
@@ -90,7 +125,9 @@ export const SEED = {
    "title": "צ'ק־אין ראשוני במלון",
    "desc": "הפקדת מזוודות בקבלה",
    "address": "Cambria Hotel New York - Chelsea, 123 W 28th St, New York, NY",
-   "kind": "hotel"
+   "kind": "hotel",
+   "titleEn": "First hotel check-in",
+   "descEn": "Drop the bags at the front desk"
   },
   {
    "id": "b03",
@@ -100,7 +137,9 @@ export const SEED = {
    "title": "ארוחת בוקר",
    "desc": "קפה ומאפה או דיינר קלאסי בצ'לסי",
    "address": "Chelsea, Manhattan, NY",
-   "kind": "food"
+   "kind": "food",
+   "titleEn": "Breakfast",
+   "descEn": "Coffee and pastry, or a classic Chelsea diner"
   },
   {
    "id": "b04",
@@ -110,7 +149,8 @@ export const SEED = {
    "title": "Google Store",
    "desc": "חנות הדגל בשדרה ה־9. מוטי מסמן וי",
    "address": "Google Store Chelsea, 76 9th Ave, New York, NY",
-   "kind": "sight"
+   "kind": "sight",
+   "descEn": "The flagship store on 9th Ave. A must for Moti"
   },
   {
    "id": "b05",
@@ -120,7 +160,9 @@ export const SEED = {
    "title": "מנוחה במלון",
    "desc": "התרעננות, ואולי כבר קבלת חדרים",
    "address": "Cambria Hotel New York - Chelsea, 123 W 28th St, New York, NY",
-   "kind": "hotel"
+   "kind": "hotel",
+   "titleEn": "Rest at the hotel",
+   "descEn": "Freshen up, maybe get the rooms early"
   },
   {
    "id": "b06",
@@ -129,7 +171,9 @@ export const SEED = {
    "title": "בן מצטרף",
    "desc": "מפגש במלון, ההרכב מלא",
    "address": "Cambria Hotel New York - Chelsea, 123 W 28th St, New York, NY",
-   "kind": "hotel"
+   "kind": "hotel",
+   "titleEn": "Ben joins",
+   "descEn": "Meet at the hotel, the whole crew is here"
   },
   {
    "id": "b07",
@@ -139,7 +183,9 @@ export const SEED = {
    "title": "Hudson Yards וה־Vessel",
    "desc": "צפייה במבנה מבחוץ",
    "address": "The Vessel, 20 Hudson Yards, New York, NY",
-   "kind": "sight"
+   "kind": "sight",
+   "titleEn": "Hudson Yards & the Vessel",
+   "descEn": "See the structure from outside"
   },
   {
    "id": "b08",
@@ -149,7 +195,9 @@ export const SEED = {
    "title": "High Line",
    "desc": "יורדים דרומה על הפארק המוגבה עד רחוב 15/16",
    "address": "High Line, W 34th St entrance, New York, NY",
-   "kind": "sight"
+   "kind": "sight",
+   "titleEn": "The High Line",
+   "descEn": "Walk south along the elevated park to 15th/16th St"
   },
   {
    "id": "b09",
@@ -159,7 +207,8 @@ export const SEED = {
    "title": "Chelsea Market",
    "desc": "בלי הזמנה. כל אחד קונה מדוכן אחר ואוכלים ביחד",
    "address": "Chelsea Market, 75 9th Ave, New York, NY",
-   "kind": "food"
+   "kind": "food",
+   "descEn": "No reservation. Everyone grabs food from a different stall and we eat together"
   },
   {
    "id": "b10",
@@ -169,7 +218,9 @@ export const SEED = {
    "title": "שקיעה ב־Little Island",
    "desc": "פארק חינמי על המים, צמוד לצ'לסי מרקט",
    "address": "Little Island, Pier 55, New York, NY",
-   "kind": "sight"
+   "kind": "sight",
+   "titleEn": "Sunset at Little Island",
+   "descEn": "A free park on the water, right next to Chelsea Market"
   },
   {
    "id": "b11",
@@ -180,7 +231,9 @@ export const SEED = {
    "address": "TAO Downtown, 92 9th Ave, New York, NY",
    "kind": "food",
    "status": "need",
-   "link": "https://www.google.com/search?q=TAO+Downtown+NYC+reservations"
+   "link": "https://www.google.com/search?q=TAO+Downtown+NYC+reservations",
+   "titleEn": "Asian dinner",
+   "descEn": "First dinner with the full crew: TAO Downtown or Buddakan"
   },
   {
    "id": "b12",
@@ -190,7 +243,9 @@ export const SEED = {
    "title": "דאון טאון ברגל",
    "desc": "מה־Oculus, דרך וול סטריט ועד השור המסתער",
    "address": "Oculus, 185 Greenwich St, New York, NY",
-   "kind": "sight"
+   "kind": "sight",
+   "titleEn": "Downtown on foot",
+   "descEn": "From the Oculus, through Wall Street, to the Charging Bull"
   },
   {
    "id": "b13",
@@ -201,17 +256,20 @@ export const SEED = {
    "desc": "כריך פסטרמה, בלי הזמנה",
    "notes": "להכין מזומן לטיפ למי שחותך את הבשר",
    "address": "Katz's Delicatessen, 205 E Houston St, New York, NY",
-   "kind": "food"
+   "kind": "food",
+   "descEn": "Pastrami sandwich, no reservation",
+   "notesEn": "Bring cash to tip the guy slicing the meat"
   },
   {
    "id": "b14",
    "date": "2026-10-01",
-   "time": "15:00",
+   "time": "15:45",
    "end": "18:00",
    "title": "שופינג בסוהו",
    "desc": "",
    "address": "SoHo, New York, NY",
-   "kind": "shop"
+   "kind": "shop",
+   "titleEn": "Shopping in SoHo"
   },
   {
    "id": "b15",
@@ -223,7 +281,9 @@ export const SEED = {
    "address": "Gallaghers Steakhouse, 228 W 52nd St, New York, NY",
    "kind": "food",
    "status": "need",
-   "link": "https://www.google.com/search?q=Gallaghers+Steakhouse+reservations"
+   "link": "https://www.google.com/search?q=Gallaghers+Steakhouse+reservations",
+   "titleEn": "Steakhouse",
+   "descEn": "Gallaghers in Midtown, close to the theater"
   },
   {
    "id": "b16",
@@ -235,7 +295,8 @@ export const SEED = {
    "address": "Eugene O'Neill Theatre, 230 W 49th St, New York, NY",
    "kind": "show",
    "status": "need",
-   "link": "https://bookofmormonbroadway.com"
+   "link": "https://bookofmormonbroadway.com",
+   "descEn": "Broadway show"
   },
   {
    "id": "b17",
@@ -246,7 +307,9 @@ export const SEED = {
    "address": "The Flatiron Room, New York, NY",
    "kind": "bar",
    "status": "need",
-   "link": "https://www.google.com/search?q=The+Flatiron+Room+reservations"
+   "link": "https://www.google.com/search?q=The+Flatiron+Room+reservations",
+   "titleEn": "Late-night whiskey",
+   "descEn": "The Flatiron Room or Brandy Library"
   },
   {
    "id": "b18",
@@ -256,7 +319,9 @@ export const SEED = {
    "title": "ריצה בסנטרל פארק",
    "desc": "דור ומוטי, מסלול ה־Reservoir",
    "address": "Jacqueline Kennedy Onassis Reservoir, Central Park, New York, NY",
-   "kind": "sport"
+   "kind": "sport",
+   "titleEn": "Run in Central Park",
+   "descEn": "Dor and Moti, the Reservoir loop"
   },
   {
    "id": "b19",
@@ -266,7 +331,9 @@ export const SEED = {
    "title": "התארגנות במלון",
    "desc": "מקלחות",
    "address": "Cambria Hotel New York - Chelsea, 123 W 28th St, New York, NY",
-   "kind": "hotel"
+   "kind": "hotel",
+   "titleEn": "Freshen up at the hotel",
+   "descEn": "Showers"
   },
   {
    "id": "b20",
@@ -276,7 +343,9 @@ export const SEED = {
    "title": "השדרה החמישית",
    "desc": "רוקפלר סנטר, חנות ה־NBA והחנויות הגדולות",
    "address": "Rockefeller Center, New York, NY",
-   "kind": "shop"
+   "kind": "shop",
+   "titleEn": "Fifth Avenue",
+   "descEn": "Rockefeller Center, the NBA Store and the big shops"
   },
   {
    "id": "b21",
@@ -286,7 +355,9 @@ export const SEED = {
    "title": "פיצה בווילג'",
    "desc": "Joe's Pizza או John's of Bleecker Street, בלי הזמנה",
    "address": "Joe's Pizza, 7 Carmine St, New York, NY",
-   "kind": "food"
+   "kind": "food",
+   "titleEn": "Pizza in the Village",
+   "descEn": "Joe's Pizza or John's of Bleecker Street, no reservation"
   },
   {
    "id": "b22",
@@ -299,7 +370,10 @@ export const SEED = {
    "address": "Comedy Cellar, 117 MacDougal St, New York, NY",
    "kind": "show",
    "status": "need",
-   "link": "https://www.comedycellar.com"
+   "link": "https://www.comedycellar.com",
+   "titleEn": "Stand-up at the Comedy Cellar",
+   "descEn": "Table for 3",
+   "notesEn": "Book as soon as the date opens, it sells out fast"
   },
   {
    "id": "b23",
@@ -309,7 +383,9 @@ export const SEED = {
    "title": "גשר ברוקלין ברגל",
    "desc": "חוצים ממנהטן לברוקלין",
    "address": "Brooklyn Bridge Pedestrian Walkway, New York, NY",
-   "kind": "sight"
+   "kind": "sight",
+   "titleEn": "Walk the Brooklyn Bridge",
+   "descEn": "Cross from Manhattan to Brooklyn"
   },
   {
    "id": "b24",
@@ -319,7 +395,8 @@ export const SEED = {
    "title": "Time Out Market",
    "desc": "מתחם אוכל בדאמבו עם תצפית מעולה",
    "address": "Time Out Market New York, 55 Water St, Brooklyn, NY",
-   "kind": "food"
+   "kind": "food",
+   "descEn": "Food hall in DUMBO with a great view"
   },
   {
    "id": "b25",
@@ -329,7 +406,9 @@ export const SEED = {
    "title": "בירות בוויליאמסבורג",
    "desc": "Radegast Hall או Other Half Brewing. סטאוטים ובירות כהות",
    "address": "Radegast Hall & Biergarten, 113 N 3rd St, Brooklyn, NY",
-   "kind": "bar"
+   "kind": "bar",
+   "titleEn": "Beers in Williamsburg",
+   "descEn": "Radegast Hall or Other Half Brewing. Stouts and dark beers"
   },
   {
    "id": "b26",
@@ -338,7 +417,9 @@ export const SEED = {
    "title": "ברים עם שירן",
    "desc": "היא מנווטת",
    "address": "",
-   "kind": "bar"
+   "kind": "bar",
+   "titleEn": "Bars with Shiran",
+   "descEn": "She's leading the way"
   },
   {
    "id": "b27",
@@ -348,7 +429,8 @@ export const SEED = {
    "title": "Midtown Comics",
    "desc": "קומות של חוברות ומרצ'נדייז של מארוול",
    "address": "Midtown Comics, Times Square, New York, NY",
-   "kind": "shop"
+   "kind": "shop",
+   "descEn": "Floors of comics and Marvel merch"
   },
   {
    "id": "b28",
@@ -358,7 +440,9 @@ export const SEED = {
    "title": "צ'ק־אאוט",
    "desc": "סגירת חשבון ומזוודות בחדר השמירה",
    "address": "Cambria Hotel New York - Chelsea, 123 W 28th St, New York, NY",
-   "kind": "hotel"
+   "kind": "hotel",
+   "titleEn": "Check-out",
+   "descEn": "Settle the bill, bags to the luggage room"
   },
   {
    "id": "b29",
@@ -368,16 +452,36 @@ export const SEED = {
    "title": "צהריים אחרונים",
    "desc": "דיינר קלאסי או בורגר טוב",
    "address": "",
-   "kind": "food"
+   "kind": "food",
+   "titleEn": "Last lunch together",
+   "descEn": "Classic diner or a good burger"
   },
   {
    "id": "b30",
    "date": "2026-10-04",
    "time": "15:00",
    "title": "פיצול כוחות",
-   "desc": "איסוף מזוודות. מוטי ובן מתקפלים, דור ממשיך למשלחת",
+   "desc": "איסוף מזוודות. דור ממשיך למשלחת ה־MBA, מוטי ובן ממשיכים לבוסטון",
    "address": "Cambria Hotel New York - Chelsea, 123 W 28th St, New York, NY",
-   "kind": "hotel"
+   "kind": "hotel",
+   "titleEn": "Splitting up",
+   "descEn": "Pick up the bags. Dor heads to the MBA program, Moti and Ben continue to Boston"
+  },
+  {
+   "id": "b31",
+   "date": "2026-10-01",
+   "time": "15:00",
+   "end": "15:45",
+   "title": "Thursday Boot Company",
+   "desc": "חנות המגפיים בסוהו. חשוב לבן",
+   "descEn": "The boot store in SoHo. A must for Ben",
+   "notes": "פתוח 11:00–19:00. יש סניף נוסף ב־48 W 21st St, קומה 2, ליד המלון",
+   "notesEn": "Open 11am–7pm. Second location at 48 W 21st St, 2nd floor, near the hotel",
+   "address": "Thursday Boot Company, 45 Crosby St, New York, NY",
+   "kind": "shop",
+   "link": "https://thursdayboots.com/pages/soho-new-york",
+   "linkLabel": "החנות",
+   "linkLabelEn": "Store page"
   }
  ],
  "mba": [
@@ -819,7 +923,8 @@ export const SEED = {
     "carrier": "LY"
    }
   ],
-  "ben": []
+  "ben": [],
+  "sydney": []
  },
  "tasks": {
   "dor": [
@@ -947,7 +1052,8 @@ export const SEED = {
     "due": "2026-09-25",
     "world": "general"
    }
-  ]
+  ],
+  "sydney": []
  },
  "packing": [
   "דרכון",
@@ -960,5 +1066,376 @@ export const SEED = {
   "חולצות מכופתרות",
   "תשורות למארחים",
   "תעודה מזהה נוספת"
+ ],
+ "boston": [
+  {
+   "id": "x01",
+   "date": "2026-10-05",
+   "time": "07:00",
+   "title": "איסוף הרכב",
+   "titleEn": "Pick up the rental car",
+   "desc": "לוודא E-ZPass, להוריד מפות אופליין, למלא דלק",
+   "descEn": "Confirm E‑ZPass, download offline maps, fill the tank",
+   "address": "",
+   "kind": "transport",
+   "notes": "ברוקלין, קווינס או לגוארדיה זולים ממנהטן. לוודא שמותר להחזיר מאוחר ב־JFK",
+   "notesEn": "Brooklyn, Queens or LaGuardia are cheaper than Manhattan. Confirm a late return at JFK is allowed",
+   "status": "need"
+  },
+  {
+   "id": "x02",
+   "date": "2026-10-05",
+   "time": "07:30",
+   "title": "נסיעה להמדן, קונטיקט",
+   "titleEn": "Drive to Hamden, CT",
+   "desc": "I-95 צפונה או Merritt Parkway, 135 ק\"מ",
+   "descEn": "I‑95 north or the Merritt Parkway, 135 km",
+   "address": "",
+   "kind": "transport",
+   "end": "09:15"
+  },
+  {
+   "id": "x03",
+   "date": "2026-10-05",
+   "time": "09:15",
+   "title": "Sleeping Giant State Park",
+   "titleEn": "Sleeping Giant State Park",
+   "desc": "מסלול Tower Trail: 5 ק\"מ הלוך־חזור, עלייה של 200 מ' עד מגדל אבן עם תצפית",
+   "descEn": "Tower Trail: 5 km round trip, a 200 m climb to a stone tower with a view",
+   "address": "200 Mount Carmel Ave, Hamden, CT",
+   "kind": "nature",
+   "end": "11:00",
+   "notes": "חניה כ־$15 לרכב מחוץ למדינה. בגשם: מוזיאון Peabody בייל במקום",
+   "notesEn": "Parking about $15 for out‑of‑state cars. If it rains: Yale Peabody Museum instead"
+  },
+  {
+   "id": "x04",
+   "date": "2026-10-05",
+   "time": "11:30",
+   "title": "פיצה בניו הייבן",
+   "titleEn": "Pizza in New Haven",
+   "desc": "פיצה על פחם ברחוב Wooster: Frank Pepe או Sally's",
+   "descEn": "Coal‑fired pizza on Wooster St: Frank Pepe or Sally's",
+   "address": "Frank Pepe Pizzeria Napoletana, 157 Wooster St, New Haven, CT",
+   "kind": "food",
+   "end": "12:45",
+   "notes": "להגיע עד 11:45 כדי לא לעמוד בתור",
+   "notesEn": "Get there by 11:45 to skip the line"
+  },
+  {
+   "id": "x05",
+   "date": "2026-10-05",
+   "time": "12:45",
+   "title": "נסיעה לניופורט",
+   "titleEn": "Drive to Newport, RI",
+   "desc": "I-95 וגשר Pell, אגרה של כ־$2",
+   "descEn": "I‑95 and the Pell Bridge, about a $2 toll",
+   "address": "",
+   "kind": "transport",
+   "end": "14:45"
+  },
+  {
+   "id": "x06",
+   "date": "2026-10-05",
+   "time": "15:00",
+   "title": "Cliff Walk",
+   "titleEn": "Cliff Walk",
+   "desc": "שביל בין צוקי האוקיינוס לאחוזות. מהכניסה הצפונית דרך Forty Steps עד Rosecliff וחזרה, 5–6 ק\"מ",
+   "descEn": "A path between the ocean cliffs and the mansions. North entrance, past Forty Steps to Rosecliff and back, 5–6 km",
+   "address": "Cliff Walk, Memorial Blvd, Newport, RI",
+   "kind": "nature",
+   "end": "16:45",
+   "notes": "הקטע בין Narragansett Ave ל־Webster St סגור. יש מעקף מסומן סביב קמפוס Salve Regina, 5 דקות",
+   "notesEn": "The stretch between Narragansett Ave and Webster St is closed. A marked detour goes around the Salve Regina campus, 5 minutes"
+  },
+  {
+   "id": "x07",
+   "date": "2026-10-05",
+   "time": "17:00",
+   "title": "Ocean Drive ושקיעה ב־Brenton Point",
+   "titleEn": "Ocean Drive & sunset at Brenton Point",
+   "desc": "לולאה של 15 ק\"מ לאורך המים. השקיעה בערך ב־18:20",
+   "descEn": "A 15 km loop along the water. Sunset around 18:20",
+   "address": "Brenton Point State Park, Newport, RI",
+   "kind": "nature",
+   "end": "18:40"
+  },
+  {
+   "id": "x08",
+   "date": "2026-10-05",
+   "time": "19:00",
+   "title": "ערב בנמל ניופורט",
+   "titleEn": "Evening at Newport harbor",
+   "desc": "Thames Street ו־Bowen's Wharf. לובסטר רול ואיסטרים",
+   "descEn": "Thames Street and Bowen's Wharf. Lobster rolls and oysters",
+   "address": "Bowen's Wharf, Newport, RI",
+   "kind": "food"
+  },
+  {
+   "id": "x09",
+   "date": "2026-10-05",
+   "time": "21:30",
+   "title": "מלון בניופורט",
+   "titleEn": "Hotel in Newport",
+   "desc": "להשלמה: שם המלון והכתובת",
+   "descEn": "To fill in: hotel name and address",
+   "address": "",
+   "kind": "hotel",
+   "notes": "לוודא שיש חניה. חלופות זולות: Middletown (10 דק') או Providence (40 דק')",
+   "notesEn": "Make sure it has parking. Cheaper options: Middletown (10 min) or Providence (40 min)",
+   "status": "need"
+  },
+  {
+   "id": "x10",
+   "date": "2026-10-06",
+   "time": "08:30",
+   "title": "נסיעה לבוסטון",
+   "titleEn": "Drive to Boston",
+   "desc": "I-95 ו־I-93, אגרות אלקטרוניות",
+   "descEn": "I‑95 and I‑93, all‑electronic tolls",
+   "address": "",
+   "kind": "transport",
+   "end": "10:15"
+  },
+  {
+   "id": "x11",
+   "date": "2026-10-06",
+   "time": "10:45",
+   "title": "Arnold Arboretum",
+   "titleEn": "Arnold Arboretum",
+   "desc": "גן העצים של הרווארד. עולים ל־Bussey Hill לתצפית על קו הרקיע, יורדים דרך אוסף המייפלים",
+   "descEn": "Harvard's tree collection. Up to Bussey Hill for the skyline view, down through the maples",
+   "address": "Arnold Arboretum, 125 Arborway, Boston, MA",
+   "kind": "nature",
+   "end": "12:15",
+   "notes": "חינם. קו Orange עד Forest Hills",
+   "notesEn": "Free. Orange Line to Forest Hills"
+  },
+  {
+   "id": "x12",
+   "date": "2026-10-06",
+   "time": "12:45",
+   "title": "צהריים ב־Time Out Market",
+   "titleEn": "Lunch at Time Out Market",
+   "desc": "מתחם אוכל בפנוויי",
+   "descEn": "Food hall in Fenway",
+   "address": "Time Out Market Boston, 401 Park Dr, Boston, MA",
+   "kind": "food",
+   "end": "13:45"
+  },
+  {
+   "id": "x13",
+   "date": "2026-10-06",
+   "time": "14:00",
+   "title": "Public Garden, Commonwealth Ave ו־Esplanade",
+   "titleEn": "Public Garden, Commonwealth Ave & the Esplanade",
+   "desc": "הליכה שטוחה של 4–5 ק\"מ לאורך נהר צ'רלס",
+   "descEn": "A flat 4–5 km walk along the Charles River",
+   "address": "Boston Public Garden, Boston, MA",
+   "kind": "nature",
+   "end": "16:00",
+   "notes": "שווה סטייה של 10 דקות לביקון היל",
+   "notesEn": "Worth a 10‑minute detour into Beacon Hill"
+  },
+  {
+   "id": "x14",
+   "date": "2026-10-06",
+   "time": "16:15",
+   "title": "קיימברידג' והרווארד",
+   "titleEn": "Cambridge & Harvard Square",
+   "desc": "קו Red מ־Charles/MGH. חוזרים לאורך הגדה הצפונית עד Weeks Footbridge",
+   "descEn": "Red Line from Charles/MGH. Walk back along the north bank to the Weeks Footbridge",
+   "address": "Harvard Square, Cambridge, MA",
+   "kind": "sight",
+   "end": "18:00"
+  },
+  {
+   "id": "x15",
+   "date": "2026-10-06",
+   "time": "18:15",
+   "title": "שקיעה ב־Piers Park",
+   "titleEn": "Sunset at Piers Park",
+   "desc": "פארק רציפים שקט מול קו הרקיע. קו Blue עד Maverick",
+   "descEn": "A quiet pier park facing the skyline. Blue Line to Maverick",
+   "address": "Piers Park, 95 Marginal St, Boston, MA",
+   "kind": "nature",
+   "end": "19:00"
+  },
+  {
+   "id": "x16",
+   "date": "2026-10-06",
+   "time": "19:30",
+   "title": "ארוחת ערב",
+   "titleEn": "Dinner",
+   "desc": "North End (איטלקי, בלי הזמנות) או Seaport (פירות ים, כדאי להזמין)",
+   "descEn": "North End (Italian, no reservations) or Seaport (seafood, book ahead)",
+   "address": "North End, Boston, MA",
+   "kind": "food"
+  },
+  {
+   "id": "x17",
+   "date": "2026-10-06",
+   "time": "21:30",
+   "title": "מלון בבוסטון",
+   "titleEn": "Hotel in Boston",
+   "desc": "להשלמה: שם המלון והכתובת",
+   "descEn": "To fill in: hotel name and address",
+   "address": "",
+   "kind": "hotel",
+   "notes": "אזורים נוחים: Back Bay, Seaport, Kendall. חניה $40–60 ללילה, בערך חצי דרך SpotHero",
+   "notesEn": "Good areas: Back Bay, Seaport, Kendall. Parking $40–60 a night, about half via SpotHero",
+   "status": "need"
+  },
+  {
+   "id": "x18",
+   "date": "2026-10-07",
+   "time": "07:30",
+   "title": "צ'ק־אאוט",
+   "titleEn": "Check out",
+   "desc": "למלא דלק בבוסטון, זול יותר מניו יורק",
+   "descEn": "Fill up in Boston, it's cheaper than New York",
+   "address": "",
+   "kind": "hotel"
+  },
+  {
+   "id": "x19",
+   "date": "2026-10-07",
+   "time": "07:45",
+   "title": "נסיעה לקונקורד",
+   "titleEn": "Drive to Concord",
+   "desc": "Route 2 מערבה",
+   "descEn": "Route 2 west",
+   "address": "",
+   "kind": "transport",
+   "end": "08:20"
+  },
+  {
+   "id": "x20",
+   "date": "2026-10-07",
+   "time": "08:20",
+   "title": "Walden Pond",
+   "titleEn": "Walden Pond",
+   "desc": "אגם בתוך יער אורנים. מסלול של 2.7 ק\"מ סביב המים",
+   "descEn": "A glacial pond in pine woods. A 2.7 km loop right along the water",
+   "address": "Walden Pond State Reservation, 915 Walden St, Concord, MA",
+   "kind": "nature",
+   "end": "10:00",
+   "notes": "להגיע לפני 9:00, הפארק נסגר כשהחניה מתמלאת. חניה $30. לבדוק בבוקר את התראות DCR",
+   "notesEn": "Arrive before 9:00, the park closes when the lot fills. Parking $30. Check DCR alerts that morning"
+  },
+  {
+   "id": "x21",
+   "date": "2026-10-07",
+   "time": "10:15",
+   "title": "נסיעה למיסטיק",
+   "titleEn": "Drive to Mystic, CT",
+   "desc": "I-495 ואז I-95",
+   "descEn": "I‑495 then I‑95",
+   "address": "",
+   "kind": "transport",
+   "end": "12:15"
+  },
+  {
+   "id": "x22",
+   "date": "2026-10-07",
+   "time": "12:15",
+   "title": "מיסטיק",
+   "titleEn": "Mystic",
+   "desc": "עיירת נמל עם גשר מתרומם. צהריים ליד הגשר",
+   "descEn": "A harbor town with an iron drawbridge. Lunch by the bridge",
+   "address": "Mystic River Bascule Bridge, Mystic, CT",
+   "kind": "food",
+   "end": "14:00"
+  },
+  {
+   "id": "x23",
+   "date": "2026-10-07",
+   "time": "14:45",
+   "title": "Hammonasset Beach",
+   "titleEn": "Hammonasset Beach",
+   "desc": "3 ק\"מ של חוף פתוח וטיילת בביצת מלח",
+   "descEn": "3 km of open beach and a salt‑marsh boardwalk",
+   "address": "Hammonasset Beach State Park, 1288 Boston Post Rd, Madison, CT",
+   "kind": "nature",
+   "end": "15:30"
+  },
+  {
+   "id": "x24",
+   "date": "2026-10-07",
+   "time": "15:30",
+   "title": "נסיעה ל־JFK",
+   "titleEn": "Drive to JFK",
+   "desc": "2.5–3.5 שעות לפי תנועה. תדלוק אחרון לפני השדה",
+   "descEn": "2.5–3.5 hours depending on traffic. Last fuel stop before the airport",
+   "address": "",
+   "kind": "transport",
+   "end": "18:15"
+  },
+  {
+   "id": "x25",
+   "date": "2026-10-07",
+   "time": "18:30",
+   "title": "החזרת הרכב ב־JFK",
+   "titleEn": "Return the car at JFK",
+   "desc": "משם AirTrain לטרמינל",
+   "descEn": "Then the AirTrain to the terminal",
+   "address": "JFK Airport, Queens, NY",
+   "kind": "transport"
+  },
+  {
+   "id": "x26",
+   "date": "2026-10-07",
+   "time": "22:30",
+   "title": "בשדה לטיסת 02:00",
+   "titleEn": "At the airport for the 02:00 flight",
+   "desc": "הטיסה יוצאת בלילה שבין 7 ל־8/10",
+   "descEn": "The flight leaves in the night between Oct 7 and 8",
+   "address": "JFK Airport, Queens, NY",
+   "kind": "transport"
+  }
+ ],
+ "bostonTasks": [
+  {
+   "id": "bt1",
+   "text": "להזמין רכב: איסוף 5/10 בבוקר, החזרה ב־JFK ב־7/10 בערב",
+   "due": "2026-09-25",
+   "world": "boston"
+  },
+  {
+   "id": "bt2",
+   "text": "לוודא שיש E-ZPass ברכב ושהאגרות כלולות",
+   "due": "2026-09-25",
+   "world": "boston"
+  },
+  {
+   "id": "bt3",
+   "text": "להזמין מלון בניופורט או פרובידנס ל־5/10, עם חניה",
+   "due": "2026-09-25",
+   "world": "boston"
+  },
+  {
+   "id": "bt4",
+   "text": "להזמין מלון בבוסטון ל־6/10 ולבדוק מחיר חניה",
+   "due": "2026-09-25",
+   "world": "boston"
+  },
+  {
+   "id": "bt5",
+   "text": "להוריד מפות אופליין של קונטיקט, רוד איילנד ומסצ'וסטס",
+   "due": "2026-10-04",
+   "world": "boston"
+  },
+  {
+   "id": "bt6",
+   "text": "לבדוק מתי נפתח הצ'ק־אין לטיסה של 02:00",
+   "due": "2026-10-06",
+   "world": "boston"
+  },
+  {
+   "id": "bt7",
+   "text": "בבוקר 7/10: לבדוק התראות DCR על Walden Pond",
+   "due": "2026-10-07",
+   "world": "boston"
+  }
  ]
 };
